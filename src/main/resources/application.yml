@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: '${PROJECT_PROFILE:@spring.profiles.active@}'
+  application:
+    name: '@project.artifactId@'
+debug: '${DEBUG:@debug.properties@}'
+trace: '${TRACE:@trace.properties@}'
+server:
+  compression:
+    enabled: true
+    min-response-size: 1
+  port: '${SERVER_PORT:@port@}'
+logging:
+  level:
+    org:
+      springframework: warn
+      xnio: warn
+      jboss: warn
+    io:
+      undertow: warn
+      
